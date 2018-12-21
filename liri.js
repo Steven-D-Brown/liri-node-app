@@ -209,6 +209,7 @@ const movieThis = str => {
 
 //search for a movie based on information passed to the function; default handled by movThis
 const movSearch = str => {
+    //url changed to force searching for only movies (not shows or episodes)
     axios.get("https://www.omdbapi.com/?t=" + str + "&y=&type=movie&plot=short&apikey=trilogy")
         .then(function (resp) {
             let movDat = resp.data;
